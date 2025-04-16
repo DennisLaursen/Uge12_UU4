@@ -1,4 +1,4 @@
-# Uge12_UU4
+# Uge12_UU4 og Uge16_UU8
  SQL og Python
 
  # Sådan er opgaven løst
@@ -14,6 +14,15 @@
  Jeg fik en fejl om at jeg ikke havde noget 'mysql' modul, da jeg forsøgte at køre koden første gang. Jeg har brugt ChatGPT til at hjælpe mig med at løse denne fejl (se link længere nede), og kom frem til at jeg skulle køre førnævnte kommandoer i terminalen for at løse problemet.
  6. Efter at jeg er lykkedes med at komme ind i MySQL serveren, har jeg oprettet en række .py filer i tests-mappen, der eksekverer en række simple kommandoer som at vise tabeller (Show_Databases.py og Show_Tables.py), oprette kolonner i en tabel (Write_Database.py) samt at populere tabeller (Populate_Tables.py). Se kommentarer i koden.
  7. Jeg vil forsøge at flette (merge) de tre tabeller, customers.csv, orders.csv og products.csv, men jeg går i stå her. I Merge_Tables.py kan du se det jeg har lavet hidtil
+
+ # Sådan er opgaven løst - UU8
+ I dagene op til påskeugen (uge 16) har jeg valgt at arbejde videre med Undervisningsuge 4 (UU4) opgaven; dels for at få en bedre forståelse af SQL-processerne, og dels fordi UU8 opgaven fordrer, at UU4 opgaven er løst.
+ 1. Det første jeg har gjort, er at rykke alle mine .py filer fra tests mappen til src mappen, da jeg efter feedback fra Christoffer blev opmærksom på at jeg har brugt disse mapper forkert. Jeg forstod test-mappen som et testmiljø, man tester sin kode i, inden man rykker den i "produktion" (src mappen). Men en test-mappe bruges i stedet til f.eks. unit-test.
+ 2. Begrebet unit-test forvirrer mig dog en del, da jeg ikke helt har lært at skelne imellem f.eks. unit-test og integrationstest endnu. Så det har jeg brugt tid på at prøve at forstå forskellen på, og er kommet frem til følgende:
+ - Unit-test foretages "isoleret", og i denne opgaves tilfælde kunne det være datavalidering. F.eks. teste, om koden korrekt kender forskel på rigtige og forkerte E-mail adresser. Altså at lave en unit-test, der ser, om koden korrekt validerer my@gmail.com som en valid mailadresse, og validerer mygmail.com som en invalid mailadresse.
+ - Integrationstest er f.eks. test om login til SQL databasen virker, eller om vi skriver den rigtige data i SQL databasen.
+ Jeg har brugt Chat GPT til at give mig nogle konkrete eksempler på unit-test, da jeg umiddelbart ikke kunne finde nogle YouTube-videoer eller artikler på internettet, der giver konkrete eksempler på unit-test (men kun fordelene ved disse).
+ 3. Jeg har gjort mine eksisterende koder mere fleksible, f.eks. at Create_Database ikke fejler, hvis databasen allerede eksisterer.
 
  # Forudsætninger
  Installationer:

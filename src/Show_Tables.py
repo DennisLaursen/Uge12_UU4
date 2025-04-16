@@ -1,3 +1,4 @@
+#Denne kode viser alle tabeller i databasen "testdb", kolonnerne i tabellen "customers", samt rækker i tabellen "customers"
 import mysql.connector
 
 #Log ind på database serveren

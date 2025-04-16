@@ -1,3 +1,4 @@
+#Denne kode viser alle databaser på serveren
 import mysql.connector
 
 #Log ind på database serveren
